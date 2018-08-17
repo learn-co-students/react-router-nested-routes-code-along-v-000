@@ -1,7 +1,6 @@
 import React from 'react';
 
-const MovieShow = ({ match, movies }) => {
-
+const MovieShow = ({match, movies}) => {
   return (
     <div>
       <h3>{ movies[match.params.movieId].title }</h3>
@@ -9,4 +8,4 @@ const MovieShow = ({ match, movies }) => {
   );
 }
 
-export default MovieShow
+export default MovieShow;

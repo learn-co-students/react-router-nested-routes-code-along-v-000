@@ -124,7 +124,7 @@ router links.
 
 Right now, we're using __React Router__ to display the __MoviesPage__ component
 when the url is `/movies`. We'll need to add in our first nested route within
-__MoviesPage__ so that going to '/movies/:movieId' will display details about a
+__MoviesPage__ so that going to '/movies/:movieID' will display details about a
 given movie using a __MovieShow__ component.
 
 Before that, let's create our __MovieShow__ component. Later on, we will
@@ -148,7 +148,7 @@ export default MovieShow;
 ```
 
 Next, we need to add a nested route in our `src/containers/MoviesPage.js` file
-to display the MovieShow container if that route matches `/movies/:movieId`
+to display the MovieShow container if that route matches `/movies/:movieID`
 
 ```javascript
 // .src/containers/MoviesPage.js
@@ -163,7 +163,7 @@ const MoviesPage = ({ match, movies }) => (
     <Route exact path={match.url} render={() => (
       <h3>Please select a Movie from the list.</h3>
     )}/>
-    <Route path={`${match.url}/:movieId`} component={MovieShow}/>
+    <Route path={`${match.url}/:movieID`} component={MovieShow}/>
   </div>
 )
 
@@ -176,7 +176,7 @@ will notice that we are inheriting `match` from `this.props` this is a POJO
 in as part of the Router props from __App__. Using `match`, we are able to show
 stuff depending on what the `match.url` returns (in this example, it returns
 `movies/`). In the 2nd `Route` component we are defining a path of
-`${match.url}/:movieId`. This will load the __MovieShow__ component when the url
+`${match.url}/:movieID`. This will load the __MovieShow__ component when the url
 looks something like `movies/1`.
 
 Going briefly back to our __MoviesList__ component, when `movies` is mapped, our
@@ -225,14 +225,14 @@ const MoviesPage = ({ match, movies }) => (
     <Route exact path={match.url} render={() => (
       <h3>Please select a Movie from the list.</h3>
     )}/>
-    <Route path={`${match.url}/:movieId`} render={routerProps => <MovieShow movies={movies} /> }/>
+    <Route path={`${match.url}/:movieID`} render={routerProps => <MovieShow movies={movies} /> }/>
   </div>
 )
 
 export default MoviesPage
 ```
 
-At this level, we don't know what `:movieId` is yet. We only know this info once
+At this level, we don't know what `:movieID` is yet. We only know this info once
 the Route has been triggered and the component, __MovieShow__ is rendered. This
 means we'll need to modify our __MovieShow__ page:
 
@@ -242,7 +242,7 @@ import React from 'react';
 const MovieShow = ({match, movies}) => {
   return (
     <div>
-      <h3>{ movies[match.params.movieId].title }</h3>
+      <h3>{ movies[match.params.movieID].title }</h3>
     </div>
   );
 }
@@ -253,9 +253,9 @@ export default MovieShow;
 Here, we've got our `movies` as an object in props. We've also got our Router
 props, from which we've extracted `match`. Within the `match` object is
 `params`, which contains any parameters from the URL path. In this case, we only
-have one, `movieId`, which we defined in __MoviesPage__. Combining info from
+have one, `movieID`, which we defined in __MoviesPage__. Combining info from
 these two props lets us access the specific movie that's ID matches the
-`movieId` from the path, resulting in the correct movie title being displayed!
+`movieID` from the path, resulting in the correct movie title being displayed!
 
 
 ### Summary
@@ -263,7 +263,7 @@ these two props lets us access the specific movie that's ID matches the
 So far we saw how to set up our nested routes. We did so by making two `Route`
 components within __MoviesPage__. One `Route` component that renders a component
 if it is a perfect match with the url or the nested `Route` if it includes the
-`match.url` and the nested key (in this case :movieId).
+`match.url` and the nested key (in this case :movieID).
 
 If you're thinking to yourself that props seem to be getting a little out of
 hand... well, you're right! Props can be unruly in complex apps, with multiple
