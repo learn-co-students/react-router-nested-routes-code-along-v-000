@@ -8,6 +8,7 @@ import MoviesPage from './MoviesPage';
 
 class App extends Component {
 
+  // Note : This is just dummy code (movies would usually be fetched)
   state = {
     movies: {
       1: { id: 1, title: 'A River Runs Through It' },
@@ -21,7 +22,11 @@ class App extends Component {
       <Router>
         <div>
           <NavBar />
+          
+          {/* Note : Route's "render" attribute takes an anonymous function */}
           <Route exact path="/" render={() => <div>Home</div>} />
+          
+          {/* Note : Route's "render" attribute also automatically passes in it's own props, which are the "routerProps" */}
           <Route path='/movies' render={routerProps => <MoviesPage {...routerProps} movies={this.state.movies}/>} />
         </div>
       </Router>
