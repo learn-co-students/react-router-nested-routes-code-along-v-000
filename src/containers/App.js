@@ -6,6 +6,12 @@ import {
 import NavBar from '../components/NavBar';
 import MoviesPage from './MoviesPage';
 
+const Home = () => {
+  return(
+    <div>Home</div>
+  );
+}
+
 class App extends Component {
 
   state = {
@@ -15,6 +21,7 @@ class App extends Component {
       3: { id: 3, title: 'Inception' }
     }
   }
+
 
   render() {
     return (
