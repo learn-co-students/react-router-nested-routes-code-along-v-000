@@ -28,5 +28,5 @@ class App extends Component {
     );
   }
 }
-
+//routerProps is just a name - props are always sent down automatically with fat arrow and with an argument, it's automatically the first thing. This is the prop giving match
 export default App;
