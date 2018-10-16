@@ -2,13 +2,16 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import MoviesList from '../components/MoviesList';
-import MovieShow from './MovieShow';
+import MoviesShow from './MoviesShow';
 
 const MoviesPage = ({ match, movies }) => (
   <div>
     <MoviesList movies={movies} />
-  </div>;
-
+    <Route exact path={match.url} render={() => (
+      <h3>Please select a Movie from the list.</h3>
+      )}/>
+    <Route path={`${match.url}/:movieId`} component={MoviesShow}/>
+  </div>
 )
 
 export default MoviesPage
