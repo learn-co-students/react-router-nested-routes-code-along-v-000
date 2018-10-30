@@ -22,6 +22,7 @@ class App extends Component {
         <div>
           <NavBar />
           <Route exact path="/" render={() => <div>Home</div>} />
+          {/* when rendering a component through a Route, component receives props from Route automatically that contain info on the route, including URL path that triggered the Route to render */}
           <Route path='/movies' render={routerProps => <MoviesPage {...routerProps} movies={this.state.movies}/>} />
         </div>
       </Router>
