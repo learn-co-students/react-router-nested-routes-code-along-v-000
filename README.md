@@ -31,7 +31,7 @@ This should be updated by the URL - the URL should have changed to
 `/videos/:videoId`. The VideoDetail in this case is a 'Nested Component' of
 `'/videos'` - it will always have the list rendered before it.
 
-## Code Along
+## Code Along beep!
 
 #### Rendering Our List
 
