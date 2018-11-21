@@ -6,6 +6,8 @@ import {
 import NavBar from '../components/NavBar';
 import MoviesPage from './MoviesPage';
 
+
+
 class App extends Component {
 
   state = {
@@ -30,3 +32,5 @@ class App extends Component {
 }
 
 export default App;
+
+
