@@ -7,7 +7,6 @@ import NavBar from '../components/NavBar';
 import MoviesPage from './MoviesPage';
 
 class App extends Component {
-
   state = {
     movies: {
       1: { id: 1, title: 'A River Runs Through It' },
