@@ -7,8 +7,12 @@ import MovieShow from './MovieShow';
 const MoviesPage = ({ match, movies }) => (
   <div>
     <MoviesList movies={movies} />
-  </div>;
+    {/* add a nested route to display the MovieShow container if that route matches /movies/:movieId */}
+    <Route exact path={match.url} render={() => (
+      <h3>Please select a movie from the list.</h3>
+    )} />
+    <Route path={`${match.url}/:movieId`} render={routerProps => <MovieShow movies={movies} {...routerProps} /> } />
+  </div>
+);
 
-)
-
-export default MoviesPage
+export default MoviesPage;
