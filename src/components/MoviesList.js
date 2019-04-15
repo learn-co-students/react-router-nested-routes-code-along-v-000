@@ -8,7 +8,7 @@ const MoviesList = ({ movies }) => {
 
   return (
     <div>
-      {renderMovies}
+      { renderMovies }
     </div>
   );
 };
