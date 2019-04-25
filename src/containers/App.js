@@ -4,7 +4,7 @@ import {
   Route
 } from 'react-router-dom';
 import NavBar from '../components/NavBar';
-import MoviesPage from './MoviesPage';
+import MoviesPage from './MoviesPage.js';
 
 class App extends Component {
 
