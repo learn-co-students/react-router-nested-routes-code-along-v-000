@@ -8,6 +8,7 @@ const MoviesList = ({ movies}) => {
     </Link>
   );
 
+
   return (
     <div>
       {renderMovies}
