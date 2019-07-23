@@ -16,6 +16,12 @@ class App extends Component {
     }
   }
 
+
+/*
+<Route path="/abc" render={(props) => <TestWidget {...props} someProp={100} />} />
+is more complete as it forwards the default props as well (e.g: match prop).
+*/
+
   render() {
     return (
       <Router>
