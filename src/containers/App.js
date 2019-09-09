@@ -6,6 +6,8 @@ import {
 import NavBar from '../components/NavBar';
 import MoviesPage from './MoviesPage';
 
+// yhe
+
 class App extends Component {
 
   state = {
