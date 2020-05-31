@@ -22,7 +22,7 @@ class App extends Component {
         <div>
           <NavBar />
           <Route exact path="/" render={() => <div>Home</div>} />
-          <Route path='/movies' render={routerProps => <MoviesPage {...routerProps} movies={this.state.movies}/>} />
+          <Route path='/movies' render={routerProps => <MoviesPage {...routerProps} movies={this.state.movies}/> } />
         </div>
       </Router>
     );
@@ -30,3 +30,5 @@ class App extends Component {
 }
 
 export default App;
+
+
