@@ -8,7 +8,7 @@ import MoviesPage from './MoviesPage';
 
 class App extends Component {
 
-  state = {
+  state = { // They have a good idea: start with dummy data, then fetch this info.
     movies: {
       1: { id: 1, title: 'A River Runs Through It' },
       2: { id: 2, title: 'Se7en' },
