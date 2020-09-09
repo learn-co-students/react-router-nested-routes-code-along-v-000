@@ -5,6 +5,8 @@ import MoviesList from "../components/MoviesList";
 import MovieShow from "../components/MovieShow";
 
 const MoviesPage = ({ match, movies }) => (
+  // const MoviesPage = (props) => (
+  // const { match, movies} = props
   <div>
     <MoviesList movies={movies} />
     <Route
@@ -14,7 +16,7 @@ const MoviesPage = ({ match, movies }) => (
     />
     <Route
       path={`${match.url}/:movieId`}
-      render={(routerProps) => <MovieShow {...routerProps} movies={movies} />}
+      render={(routerProps) => <MovieShow {...routerProps} movies={movies} />} // <MovieShow {...routerProps} movies = {props.movies} />
     />
   </div>
 );
