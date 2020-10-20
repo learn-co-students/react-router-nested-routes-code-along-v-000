@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "mocha-multi": "^1.0.1",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "webpack": "^3.11.0"
@@ -32,7 +32,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
     "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-adapter-react-16": "^1.15.5",
     "mocha": "^5.2.0",
     "sinon": "^6.1.0"
   }
